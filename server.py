@@ -8,9 +8,8 @@ _cache = {}
 def fetch_total():
     total, count, currency, cursor = 0, 0, None, None
     while True:
-        params = {'modifiedAfter': '2016-04-10T12:00:00Z', 'modifiedBefore': '2028-04-15T12:30:00Z'}
-        if cursor:
-            params['cursor'] = cursor
+        params = {'cursor': cursor} if cursor else \
+                 {'modifiedAfter': '2016-04-10T12:00:00Z', 'modifiedBefore': '2028-04-15T12:30:00Z'}
         req = urllib.request.Request(
             'https://api.squarespace.com/1.0/commerce/orders?' + urllib.parse.urlencode(params),
             headers={'Authorization': f'Bearer {TOKEN}', 'User-Agent': 'wedding-lefebvre'})
