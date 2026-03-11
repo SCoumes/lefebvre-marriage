@@ -13,6 +13,7 @@ export default {
     }
 
     let total = 0, count = 0, currency = null, cursor = null;
+    const messages = [];
 
     do {
       const params = cursor
@@ -30,12 +31,14 @@ export default {
         total += parseFloat(order.grandTotal?.value ?? 0);
         count++;
         currency ??= order.grandTotal?.currency;
+        const msg = order.formSubmission?.find(f => f.label === 'Petit mot')?.value;
+        if (msg) messages.push(msg);
       }
 
       cursor = data.pagination?.hasNextPage ? data.pagination.nextPageCursor : null;
     } while (cursor);
 
-    cache = { total: total.toFixed(2), currency, orderCount: count };
+    cache = { total: total.toFixed(2), currency, orderCount: count, messages };
     cacheTime = Date.now();
 
     return json(cache);
