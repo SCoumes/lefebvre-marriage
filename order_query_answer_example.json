@@ -1,0 +1,105 @@
+{
+  "result" : [ {
+    "id" : "69b006cdeddfa17f7ffded64",
+    "orderNumber" : "2",
+    "createdOn" : "2026-03-10T11:55:57.169Z",
+    "modifiedOn" : "2026-03-10T11:55:57.776Z",
+    "channel" : "web",
+    "testmode" : true,
+    "customerEmail" : "simon@coumes.fr",
+    "customerId" : "69aecf5e8247de0ae8237143",
+    "billingAddress" : {
+      "firstName" : "Simon",
+      "lastName" : "Coumes",
+      "address1" : "test",
+      "address2" : null,
+      "city" : "Tesson",
+      "state" : "Nouvelle-Aquitaine",
+      "countryCode" : "FR",
+      "postalCode" : "17460",
+      "phone" : ""
+    },
+    "shippingAddress" : null,
+    "fulfillmentStatus" : "PENDING",
+    "lineItems" : [ {
+      "id" : "69b00460ee59fb4cb71af063",
+      "variantId" : "86222042-aa95-4324-8fb7-314edd49e994",
+      "sku" : "SQ4611919",
+      "weight" : 0.0,
+      "width" : 0.0,
+      "length" : 0.0,
+      "height" : 0.0,
+      "productId" : "69aeca7d4c6e5a3e3ba3bf31",
+      "productName" : "Massage pour roquette",
+      "quantity" : 1,
+      "unitPricePaid" : {
+        "value" : "0.00",
+        "currency" : "EUR"
+      },
+      "variantOptions" : [ ],
+      "customizations" : null,
+      "imageUrl" : "https://images.squarespace-cdn.com/content/v1/69aec6e0e3ec3723d534ce24/fab4856c-8556-41e7-8e34-0b97d1062cab/cover-r4x3w1200-57f55eaac281c-cat-massage.png?format=300w",
+      "lineItemType" : "SERVICE"
+    }, {
+      "id" : "69b00691da65dc6d56e2c898",
+      "variantId" : "e9805bdc-1273-45e3-8410-ef4b505fec82",
+      "sku" : "SQ6311611",
+      "weight" : 0.0,
+      "width" : 0.0,
+      "length" : 0.0,
+      "height" : 0.0,
+      "productId" : "69aec9c3b20fb65b688e8b81",
+      "productName" : "Croquettes pour roquette",
+      "quantity" : 1,
+      "unitPricePaid" : {
+        "value" : "5.00",
+        "currency" : "EUR"
+      },
+      "variantOptions" : [ ],
+      "customizations" : null,
+      "imageUrl" : "https://images.squarespace-cdn.com/content/v1/69aec6e0e3ec3723d534ce24/050b1888-09ab-4a79-86f2-89a8e523cb2f/IMG_20260307_200338.jpg?format=300w",
+      "lineItemType" : "SERVICE"
+    } ],
+    "internalNotes" : [ ],
+    "shippingLines" : [ ],
+    "discountLines" : [ ],
+    "formSubmission" : [ {
+      "label" : "Petit mot",
+      "value" : "Pouet"
+    } ],
+    "fulfillments" : [ ],
+    "subtotal" : {
+      "value" : "5.00",
+      "currency" : "EUR"
+    },
+    "shippingTotal" : {
+      "value" : "0.00",
+      "currency" : "EUR"
+    },
+    "discountTotal" : {
+      "value" : "0.00",
+      "currency" : "EUR"
+    },
+    "taxTotal" : {
+      "value" : "0.00",
+      "currency" : "EUR"
+    },
+    "refundedTotal" : {
+      "value" : "0.00",
+      "currency" : "EUR"
+    },
+    "grandTotal" : {
+      "value" : "5.00",
+      "currency" : "EUR"
+    },
+    "channelName" : "Squarespace",
+    "externalOrderReference" : null,
+    "fulfilledOn" : null,
+    "priceTaxInterpretation" : "EXCLUSIVE"
+  } ],
+  "pagination" : {
+    "nextPageUrl" : null,
+    "nextPageCursor" : null,
+    "hasNextPage" : false
+  }
+}

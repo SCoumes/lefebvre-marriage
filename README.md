@@ -23,25 +23,11 @@ Two components:
 }
 ```
 
-**Deployment:** synced from the `main` branch via Cloudflare's GitHub integration (no build step, entry point: `worker.js`).
+**Deployment:** Human coy/paste to the cloudflare webservice.
 
 **Environment variable:** set `SQUARESPACE_API_TOKEN` as a secret in the Worker settings on the Cloudflare dashboard.
 
 Results are cached in-memory for 5 seconds.
-
-## Squarespace Snippet
-
-Paste `snip.js` into a Squarespace Code Block. Before pasting, edit the `MILESTONES` array at the top of the file:
-
-```js
-const MILESTONES = [
-  { amount: 500, text: "un photographe supplémentaire sera là" },
-  { amount: 1000, text: "une surprise vous attend" },
-];
-```
-
-Each milestone shows in green once the total exceeds its amount. The line above the list shows how much is needed to reach the next one.
-
 ## Local Setup
 
 ```bash
