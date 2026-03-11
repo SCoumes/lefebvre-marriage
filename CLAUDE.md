@@ -12,17 +12,20 @@ Utility scripts for the Lefebvre wedding website, which runs on Squarespace. Cur
 
 Fetches raw orders JSON from the Squarespace Commerce API (for debugging). The bearer token is hardcoded; update it if the token is rotated.
 
-### `server.js`
+### `server.py`
 
-Node.js HTTP server (no dependencies) deployed on Render. Exposes a single endpoint:
+Python/Flask server deployed on Render. Exposes a single endpoint:
 
 - `GET /total` — fetches all paginated orders from Squarespace and returns `{ total, currency, orderCount }`. Results are cached in-memory for 5 minutes.
 
 Run locally:
 
 ```bash
-SQUARESPACE_API_TOKEN=<token> node server.js
+pip install flask
+SQUARESPACE_API_TOKEN=<token> python server.py
 # → http://localhost:3000/total
 ```
 
 The API token must be set as the `SQUARESPACE_API_TOKEN` environment variable (configured in Render's dashboard, not committed to the repo).
+
+Render settings: **Build command** `pip install -r requirements.txt`, **Start command** `python server.py`.
