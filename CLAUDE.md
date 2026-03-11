@@ -12,20 +12,14 @@ Utility scripts for the Lefebvre wedding website, which runs on Squarespace. Cur
 
 Fetches raw orders JSON from the Squarespace Commerce API (for debugging). The bearer token is hardcoded; update it if the token is rotated.
 
-### `server.py`
+### `worker.js`
 
-Python/Flask server deployed on Render. Exposes a single endpoint:
+Cloudflare Worker (JavaScript). Exposes a single endpoint:
 
-- `GET /total` — fetches all paginated orders from Squarespace and returns `{ total, currency, orderCount }`. Results are cached in-memory for 5 minutes.
+- `GET /total` — fetches all paginated orders from Squarespace and returns `{ total, currency, orderCount }`. Results are cached in-memory for 5 seconds.
 
-Run locally:
+Deploy by pasting the file contents into the Cloudflare Workers dashboard editor. Set `SQUARESPACE_API_TOKEN` as an environment variable (secret) in the Worker settings.
 
-```bash
-pip install flask
-SQUARESPACE_API_TOKEN=<token> python server.py
-# → http://localhost:3000/total
-```
+### `server.py` / `requirements.txt`
 
-The API token must be set as the `SQUARESPACE_API_TOKEN` environment variable (configured in Render's dashboard, not committed to the repo).
-
-Render settings: **Build command** `pip install -r requirements.txt`, **Start command** `python server.py`.
+Older Python/Flask backend, previously deployed on Render. Superseded by `worker.js`.
