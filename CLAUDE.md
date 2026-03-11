@@ -10,7 +10,7 @@ Utility scripts for the Lefebvre wedding website, which runs on Squarespace. Cur
 
 ### `get_orders.sh`
 
-Fetches raw orders JSON from the Squarespace Commerce API (for debugging). The bearer token is hardcoded; update it if the token is rotated.
+Fetches raw orders JSON from the Squarespace Commerce API (for debugging). Reads `SQUARESPACE_API_TOKEN` from `.env` (gitignored). Copy `.env.example` to `.env` to set it up locally.
 
 ### `worker.js`
 
